@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<!-- Dashboard di esempio (inventata) per i render e la guida: sostituisce la schermata reale. -->
+<style>
+ *{box-sizing:border-box;margin:0;padding:0}
+ body{width:960px;height:600px;background:#000;font-family:"Segoe UI",Roboto,Arial,sans-serif;color:#e8e8ea;overflow:hidden}
+ .wrap{display:flex;height:600px}
+ .map{width:470px;position:relative}
+ .side{flex:1;padding:12px 14px 12px 6px;display:flex;flex-direction:column;gap:9px}
+ .chips{position:absolute;left:14px;top:16px;display:flex;flex-direction:column;gap:8px;z-index:2}
+ .chip{background:#2a2c30;border-radius:14px;padding:6px 14px;font-size:13px;width:110px}
+ .chip.on{background:#0e8fc4;color:#fff}
+ .card{background:#1c1d20;border-radius:12px;padding:10px 12px}
+ .row{display:flex;align-items:center;gap:8px}
+ .clock{font-size:42px;font-weight:300;letter-spacing:.5px}
+ .muted{color:#9a9ca3;font-size:13px}
+ .home{width:44px;height:44px;border-radius:50%;background:#1c1d20;display:flex;align-items:center;justify-content:center;font-size:20px}
+ .wx{display:flex;justify-content:space-between;font-size:11px;color:#b9bbc1;margin-top:6px}
+ .wx div{text-align:center}
+ .btn{background:#2a2c30;border-radius:16px;padding:6px 10px;font-size:12px;display:flex;align-items:center;gap:6px}
+ .dot{width:11px;height:11px;border-radius:50%}
+ .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+ .grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+ .t{font-size:14px;font-weight:600}
+ .round{width:30px;height:30px;border-radius:50%;background:#2a2c30;display:inline-flex;align-items:center;justify-content:center;font-size:12px;margin-right:6px}
+ svg text{font-size:12.5px;fill:#fff;font-weight:600;paint-order:stroke;stroke:#0006;stroke-width:2px}
+</style></head><body><div class="wrap">
+<div class="map">
+ <div class="chips"><div class="chip">💡 Luci</div><div class="chip on">🤖 Pulizie</div><div class="chip on">⌖ Vista iniziale</div></div>
+ <svg width="470" height="600" viewBox="0 0 470 600">
+  <g stroke="#555" stroke-width="3">
+   <rect x="150" y="40" width="130" height="120" fill="#2ec4b6"/>
+   <rect x="280" y="40" width="90" height="80" fill="#e07a5f"/>
+   <rect x="280" y="120" width="90" height="110" fill="#5b8def"/>
+   <rect x="370" y="40" width="80" height="140" fill="#2ec4b6"/>
+   <rect x="150" y="160" width="130" height="150" fill="#e9c46a"/>
+   <rect x="280" y="230" width="170" height="80" fill="#2ec4b6"/>
+   <rect x="370" y="180" width="80" height="50" fill="#e07a5f"/>
+   <rect x="60" y="310" width="200" height="130" fill="#5b8def"/>
+   <rect x="260" y="310" width="90" height="130" fill="#e07a5f"/>
+   <rect x="350" y="310" width="100" height="70" fill="#e9c46a"/>
+   <rect x="350" y="380" width="100" height="60" fill="#2ec4b6"/>
+   <rect x="60" y="440" width="150" height="120" fill="#e07a5f"/>
+   <rect x="210" y="440" width="120" height="120" fill="#e9c46a"/>
+   <rect x="330" y="440" width="120" height="120" fill="#5b8def"/>
+  </g>
+  <text x="215" y="104" text-anchor="middle">Camera</text>
+  <text x="325" y="84" text-anchor="middle">Bagno</text>
+  <text x="325" y="178" text-anchor="middle">Corridoio</text>
+  <text x="410" y="114" text-anchor="middle">Studio</text>
+  <text x="215" y="238" text-anchor="middle">Soggiorno</text>
+  <text x="365" y="274" text-anchor="middle">Cucina</text>
+  <text x="410" y="210" text-anchor="middle">Dispensa</text>
+  <text x="160" y="378" text-anchor="middle">Sala</text>
+  <text x="305" y="378" text-anchor="middle">Lavanderia</text>
+  <text x="400" y="349" text-anchor="middle">Bagno 2</text>
+  <text x="400" y="414" text-anchor="middle">Ingresso</text>
+  <text x="135" y="504" text-anchor="middle">Camera 2</text>
+  <text x="270" y="504" text-anchor="middle">Cameretta</text>
+  <text x="390" y="504" text-anchor="middle">Ripostiglio</text>
+  <circle cx="230" cy="275" r="10" fill="#fff"/><text x="246" y="279" style="font-size:11px">Robot</text>
+ </svg>
+</div>
+<div class="side">
+ <div class="row"><div class="home">⌂</div><div class="clock">10:30</div><div class="muted" style="font-size:16px;margin-left:6px">Lunedì 1 Giugno</div></div>
+ <div class="card"><div class="row"><span style="font-size:20px">☀</span><span style="font-size:20px">22°</span><b style="font-size:13px">Sereno</b><span class="muted">25° / 14° · 40%</span></div>
+  <div class="wx"><div>11<br>☀ 22°</div><div>13<br>☀ 24°</div><div>15<br>⛅ 25°</div><div>17<br>⛅ 23°</div><div>19<br>☁ 20°</div><div>21<br>☾ 18°</div><div>23<br>☾ 16°</div></div></div>
+ <div class="card"><div class="row" style="justify-content:space-between"><span class="t">⌂ Zona giorno</span><span class="muted">3 di 5 accese</span></div>
+  <div class="row" style="margin-top:8px"><div class="btn"><span class="dot" style="background:#f2f2f2"></span>Bianca</div><div class="btn"><span class="dot" style="background:#f6c177"></span>Media</div><div class="btn"><span class="dot" style="background:#f4a259"></span>Calda</div><div class="btn">⏻ Spegni</div></div>
+  <div class="row" style="justify-content:space-between;margin-top:10px"><span class="t">⌂ Zona notte</span><span class="muted">spente</span></div>
+  <div class="row" style="margin-top:8px"><div class="btn"><span class="dot" style="background:#f2f2f2"></span>Bianca</div><div class="btn"><span class="dot" style="background:#f6c177"></span>Media</div><div class="btn"><span class="dot" style="background:#f4a259"></span>Calda</div><div class="btn">⏻ Spegni</div></div></div>
+ <div class="card row"><div style="width:70px;height:48px;border-radius:6px;background:linear-gradient(#4a5a6a,#2b3440)"></div><div><div class="t">Campanello</div><div style="font-size:13px">Ultimo: ha suonato alle 9:12</div><div class="muted">Batteria 80%</div></div></div>
+ <div class="grid3"><div class="card"><div class="t">🤖 Robot 1</div><div class="muted">In carica · 100%</div><div style="margin-top:6px"><span class="round">▶</span><span class="round">⌂</span></div></div>
+  <div class="card"><div class="t">🤖 Robot 2</div><div class="muted">Pulisce · 64%</div><div style="margin-top:6px"><span class="round">❚❚</span><span class="round">⌂</span></div></div>
+  <div class="card"><div class="t">🌡 Clima</div><div class="muted">21,5° · 48%</div><div style="margin-top:6px"><span class="round">−</span><span class="round">+</span></div></div></div>
+ <div class="grid2"><div class="card"><div class="t">♨ Caldaia</div><div class="muted">Spenta</div></div><div class="card"><div class="t">💧 Irrigatore</div><div class="muted">Prossimo: 19:00</div></div></div>
+</div></div></body></html>

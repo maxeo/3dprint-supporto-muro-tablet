@@ -1,0 +1,532 @@
+{
+ "output": "guida.html",
+ "root": "..",
+ "title": "Supporto Muro Tablet T65 · Guida",
+ "theme": {
+  "accent": "#5f7f8f",
+  "viewer_bg": "#1d2226"
+ },
+ "header": {
+  "eyebrow": "Supporto Muro Tablet T65 · Teclast T65 13,4\" · PLA bianco",
+  "h1": "Tre pezzi, quattro viti, nessun cavo a vista.",
+  "intro_html": "<b>Cornice bianca a incasso per il pannello di Home Assistant.</b> Il fondo si avvita alla scatola elettrica e la chiude; dentro la scatola va l'alimentatore USB-C. La cornice, in due metà unite da due viti nascoste, tiene il tablet con tre fermi: due sopra, ai lati della fotocamera, e uno sotto. <b>Prima versione:</b> porte, tasti e scatola sono stimati da foto e disegni ufficiali, da verificare col calibro prima di stampare.",
+  "facts": [
+   {
+    "value": "340 × 231 mm",
+    "label": "cornice"
+   },
+   {
+    "value": "16 mm",
+    "label": "sporgenza dal muro"
+   },
+   {
+    "value": "3 fermi",
+    "label": "coprono 3 mm di cornice nera"
+   },
+   {
+    "value": "4 viti M3",
+    "label": "2 giunti + 2 da sotto"
+   }
+  ]
+ },
+ "camera": {
+  "yaw": -0.35,
+  "pitch": 1.1
+ },
+ "caption": "Montato: il tablet (accessorio, non si stampa) dentro la cornice, il fondo dietro contro il muro.",
+ "model_note_html": "<span class='badge'>Quote del modello</span><p>Cornice 340 × 231 × 16 mm · apertura 311 × 202 mm · tablet 310 × 201 × 8,5 mm</p>",
+ "groups": {
+  "Fondo": {
+   "color": "#9fb1c2"
+  },
+  "Cornice": {
+   "color": "#ece9e2"
+  }
+ },
+ "accessories": {
+  "file": "dati/accessori.json",
+  "label": "Tablet e viti",
+  "attach": "P02",
+  "color": "#55585e",
+  "tip": "Tablet (con una dashboard di esempio) e viti: non si stampano",
+  "show": true
+ },
+ "parts": [
+  {
+   "id": "P01",
+   "label": "Fondo",
+   "group": "Fondo",
+   "file": "stl/P01_Fondo.stl",
+   "quantity": 1,
+   "print": "fondo",
+   "mode": "mesh",
+   "max_triangles": 4000,
+   "cull": true,
+   "note_html": "Piastra a muro: chiude la scatola, passacavo e canalina verso sinistra, nicchia per la doppia fotocamera posteriore, due torrette per le viti da sotto."
+  },
+  {
+   "id": "P02",
+   "label": "Cornice sinistra",
+   "group": "Cornice",
+   "file": "stl/P02_Cornice_Sx.stl",
+   "quantity": 1,
+   "print": "cornice",
+   "mode": "mesh",
+   "max_triangles": 6000,
+   "cull": true,
+   "matrix": [
+    [
+     1,
+     0,
+     0,
+     -85
+    ],
+    [
+     0,
+     -1,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     -1,
+     16.0
+    ],
+    [
+     0,
+     0,
+     0,
+     1
+    ]
+   ],
+   "note_html": "Metà sinistra: tasca della spina USB-C a L, fermo sinistro, preforo M3 dei giunti."
+  },
+  {
+   "id": "P03",
+   "label": "Cornice destra",
+   "group": "Cornice",
+   "file": "stl/P03_Cornice_Dx.stl",
+   "quantity": 1,
+   "print": "cornice",
+   "mode": "mesh",
+   "max_triangles": 6000,
+   "cull": true,
+   "matrix": [
+    [
+     1,
+     0,
+     0,
+     85
+    ],
+    [
+     0,
+     -1,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     -1,
+     16.0
+    ],
+    [
+     0,
+     0,
+     0,
+     1
+    ]
+   ],
+   "note_html": "Metà destra: fermo destro e fermo sotto, cunei dei giunti con il foro passante e la lamatura."
+  }
+ ],
+ "steps_section": {
+  "eyebrow": "01 / Montaggio",
+  "h2": "Fondo al muro, tablet nella cornice, cornice sul fondo.",
+  "intro_html": "Destra e sinistra guardando lo schermo. Il tablet entra nella cornice dal retro, con la cornice appoggiata a faccia in giù su un panno.",
+  "start_html": "<h3>Prima l'elettricità.</h3><p>A corrente staccata, monta nella scatola l'alimentatore USB-C (modulo da incasso o mini alimentatore 5 V) e collega un cavo USB-C corto con la spina <b>a L</b> dalla parte del tablet. Se vuoi limitare la carica fra 20 e 80%, metti nella scatola anche un relè comandato da Home Assistant che accende l'alimentatore.</p>"
+ },
+ "steps": [
+  {
+   "title": "Appoggia il fondo al muro",
+   "short": "cavo nella canalina",
+   "text": "Fai uscire il cavo dal passacavo al centro del fondo (P01) e posalo nella canalina verso sinistra, lasciando libera la spina a L. Appoggia P01 al muro: il passacavo sta davanti alla scatola, la nicchia in alto a sinistra accoglie la fotocamera posteriore. Segna i due fori in basso e fai i fori Ø5 per i tasselli.",
+   "parts": [
+    "P01"
+   ],
+   "built": [
+    "P01"
+   ],
+   "moving": [
+    "P01"
+   ],
+   "dir": [
+    0,
+    0,
+    1
+   ],
+   "travel": 60
+  },
+  {
+   "title": "Avvita il fondo",
+   "short": "2 viti scatola + 2 tasselli",
+   "text": "Avvita le due viti della scatola 503 nei fori svasati sopra e sotto il passacavo (interasse 83,5 mm), poi le due viti nei tasselli Ø5 in basso. Le teste svasate restano a filo: il tablet ci appoggia sopra.",
+   "parts": [
+    "P01",
+    "W1",
+    "W2",
+    "W3",
+    "W4"
+   ],
+   "built": [
+    "P01",
+    "W1",
+    "W2",
+    "W3",
+    "W4"
+   ],
+   "moving": [
+    "W1",
+    "W2",
+    "W3",
+    "W4"
+   ],
+   "dir": [
+    0,
+    0,
+    1
+   ],
+   "travel": 45
+  },
+  {
+   "title": "Accosta le due metà della cornice",
+   "short": "a faccia in giù",
+   "text": "Appoggia P02 e P03 a faccia in giù su un panno e accostale al centro: i blocchetti sopra e sotto combaciano sul piano inclinato a 45°.",
+   "parts": [
+    "P02",
+    "P03"
+   ],
+   "built": [
+    "P02",
+    "P03"
+   ],
+   "moving": [
+    "P03"
+   ],
+   "dir": [
+    1,
+    0,
+    0
+   ],
+   "travel": 40
+  },
+  {
+   "title": "Avvita i giunti",
+   "short": "2 viti M3x6 dal retro",
+   "text": "Avvita dal retro le due viti M3x6 nei fori lamati di P03, una sopra e una sotto: attraversano il cuneo e fanno presa in P02. La testa resta dentro la lamatura. Stringi poco: è PLA.",
+   "parts": [
+    "P02",
+    "P03",
+    "V1",
+    "V2"
+   ],
+   "built": [
+    "P02",
+    "P03",
+    "V1",
+    "V2"
+   ],
+   "moving": [
+    "V1",
+    "V2"
+   ],
+   "dir": [
+    0,
+    0,
+    -1
+   ],
+   "travel": 30
+  },
+  {
+   "title": "Metti il tablet nella cornice",
+   "short": "dal retro · schermo in giù",
+   "text": "Con la cornice ancora a faccia in giù, appoggia il tablet con lo schermo verso i tre fermi e la fotocamera frontale in alto, al centro fra i due fermi. La presa USB-C sta sul lato sinistro, davanti alla tasca di 12,5 mm che accoglie la spina a L.",
+   "parts": [
+    "P02",
+    "P03",
+    "TAB1",
+    "TAB2",
+    "TAB3",
+    "TAB4"
+   ],
+   "built": [
+    "P02",
+    "P03",
+    "V1",
+    "V2",
+    "TAB1",
+    "TAB2",
+    "TAB3",
+    "TAB4"
+   ],
+   "moving": [
+    "TAB1",
+    "TAB2",
+    "TAB3",
+    "TAB4"
+   ],
+   "dir": [
+    0,
+    0,
+    -1
+   ],
+   "travel": 40
+  },
+  {
+   "title": "Aggancia la cornice al fondo",
+   "short": "spina a L · premi contro il muro",
+   "text": "Collega la spina a L al tablet, porta la cornice contro il fondo e premila finché le pareti toccano il muro: il tablet appoggia il retro sul fondo.",
+   "parts": [
+    "P01",
+    "P02",
+    "P03",
+    "TAB1",
+    "TAB2",
+    "TAB3",
+    "TAB4"
+   ],
+   "built": [
+    "P01",
+    "P02",
+    "P03",
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "V1",
+    "V2",
+    "TAB1",
+    "TAB2",
+    "TAB3",
+    "TAB4"
+   ],
+   "moving": [
+    "P02",
+    "P03",
+    "V1",
+    "V2",
+    "TAB1",
+    "TAB2",
+    "TAB3",
+    "TAB4"
+   ],
+   "dir": [
+    0,
+    0,
+    1
+   ],
+   "travel": 50
+  },
+  {
+   "title": "Avvita la cornice da sotto",
+   "short": "2 viti M3x10",
+   "text": "Da sotto, avvita le due viti M3x10 nei fori lamati del fianco inferiore: entrano nelle torrette del fondo. Sono invisibili da davanti. Le feritoie accanto lasciano uscire il suono degli altoparlanti.",
+   "parts": [
+    "P02",
+    "P03",
+    "V3",
+    "V4"
+   ],
+   "built": [
+    "P01",
+    "P02",
+    "P03",
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "TAB1",
+    "TAB2",
+    "TAB3",
+    "TAB4"
+   ],
+   "moving": [
+    "V3",
+    "V4"
+   ],
+   "dir": [
+    0,
+    -1,
+    0
+   ],
+   "travel": 30
+  },
+  {
+   "title": "Controllo",
+   "short": "fermi e fotocamera",
+   "text": "I tre fermi devono appoggiare sulla cornice nera senza toccare il display; la fotocamera frontale resta libera. Se il tablet balla, aggiungi un velo di feltro adesivo sul fondo.",
+   "parts": [
+    "P01",
+    "P02",
+    "P03",
+    "TAB1",
+    "TAB2",
+    "TAB3",
+    "TAB4"
+   ],
+   "built": [
+    "P01",
+    "P02",
+    "P03",
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "TAB1",
+    "TAB2",
+    "TAB3",
+    "TAB4"
+   ]
+  }
+ ],
+ "map": {
+  "eyebrow": "02 / Sigle",
+  "h2": "Tre pezzi da stampare.",
+  "cards": [
+   {
+    "title": "Vista dal davanti",
+    "columns": 2,
+    "top_label": "Alto",
+    "bottom_label": "Basso",
+    "ids": [
+     "P02",
+     "P03"
+    ],
+    "note_html": "La cornice è divisa al centro: sta in due pezzi sul piatto 250 × 250."
+   },
+   {
+    "title": "Dietro, contro il muro",
+    "columns": 1,
+    "ids": [
+     "P01"
+    ],
+    "note_html": "Il fondo sta tutto dentro la cornice.<br><br><b>Viteria</b> (non si stampa):<ul><li>2 viti M3x6 testa cilindrica · giunti fra le metà (V1, V2)</li><li>2 viti M3x10 testa cilindrica · cornice al fondo, da sotto (V3, V4)</li><li>2 viti M3,5 della scatola 503 · fondo alla scatola (W1, W2)</li><li>2 tasselli Ø5 con viti svasate Ø4x30 · fondo al muro (W3, W4)</li></ul>Le M3 vanno nel preforo da 2,5 mm: autofilettanti per plastica o metriche."
+   }
+  ]
+ },
+ "print": {
+  "eyebrow": "03 / Stampa",
+  "h2": "Lista e parametri di stampa.",
+  "common_html": "<b>Punto di partenza da verificare</b> (nessuna prova ancora): PLA bianco opaco · ugello 0,4 · layer 0,20 · nessun supporto. Tutti i pezzi stanno sul piatto 250 × 250.",
+  "profiles": [
+   {
+    "key": "cornice",
+    "title": "P02–P03 · cornice",
+    "rows": [
+     [
+      "Orientamento",
+      "faccia anteriore sul piatto (già così nello STL)"
+     ],
+     [
+      "Piatto",
+      "PEI testurizzato"
+     ],
+     [
+      "Pareti",
+      "3"
+     ],
+     [
+      "Strati sopra/sotto",
+      "5 / 5"
+     ],
+     [
+      "Riempimento",
+      "15% gyroid"
+     ],
+     [
+      "Supporti",
+      "no"
+     ],
+     [
+      "Cucitura",
+      "allineata, sul retro"
+     ]
+    ],
+    "why": "La faccia che si vede nasce sul piatto: liscia e uniforme, con il PEI testurizzato diventa opaca come nei mockup. I cunei dei giunti salgono a 45° e le feritoie sono piccole: niente supporti. 3 pareti perché i preforo M3 tengano.",
+    "summary": "faccia sul piatto · 3 pareti · 15% gyroid · no supporti"
+   },
+   {
+    "key": "fondo",
+    "title": "P01 · fondo",
+    "rows": [
+     [
+      "Orientamento",
+      "retro sul piatto (già così)"
+     ],
+     [
+      "Pareti",
+      "3"
+     ],
+     [
+      "Riempimento",
+      "15% gyroid"
+     ],
+     [
+      "Supporti",
+      "no"
+     ]
+    ],
+    "why": "È nascosto: conta solo che sia piatto e rigido. Pieno peserebbe 360,4 g, con il 15% circa 126 g.",
+    "summary": "3 pareti · 15% · no supporti"
+   }
+  ],
+  "note_html": "<b>Prima di stampare tutto:</b> stampa una striscia della cornice (taglio nello slicer) e prova il tablet nell'apertura e i fermi sulla cornice nera."
+ },
+ "notes": {
+  "eyebrow": "04 / Il giunto",
+  "h2": "Un cuneo a 45°, una vite dal retro.",
+  "nav": "Giunto",
+  "cards": [
+   {
+    "title": "Sezione del giunto (sopra e sotto)",
+    "html": "<p>Davanti la linea fra le metà è dritta. Dietro, nei blocchetti, le due metà si toccano su un piano a 45°: stampate a faccia in giù nessuna ha sbalzi. La vite M3x6 entra dal retro nella lamatura di P03, attraversa il cuneo e fa presa in P02.</p><svg viewBox='0 0 320 170' style='max-width:420px;width:100%'><rect x='20' y='20' width='280' height='22' fill='#ece9e2' stroke='#333'/><text x='160' y='35' font-size='11' text-anchor='middle'>bordo anteriore 1,75 mm (faccia)</text><polygon points='40,42 170,42 100,132 40,132' fill='#d8cfc0' stroke='#333'/><polygon points='170,42 280,42 280,132 100,132' fill='#c4d4de' stroke='#333'/><line x1='160' y1='20' x2='160' y2='42' stroke='#333' stroke-dasharray='3 2'/><rect x='118' y='72' width='10' height='60' fill='#888'/><rect x='110' y='122' width='26' height='12' fill='#666'/><text x='60' y='90' font-size='12'>P02</text><text x='230' y='90' font-size='12'>P03</text><text x='160' y='160' font-size='11' text-anchor='middle'>retro (verso il muro) · vite M3x6</text></svg>"
+   },
+   {
+    "title": "Da misurare sul tablet vero",
+    "html": "<ul><li>Posizione della presa USB-C sul lato sinistro (la tasca copre da 95 mm sotto il centro fino al centro).</li><li>Tasto power e tasti volume: la cornice ha un incavo, ma restano coperti (per riavviare si toglie la cornice).</li><li>Sporgenza della fotocamera posteriore (nicchia 2,5 mm).</li><li>Centro della scatola rispetto al centro del tablet: ora 58 mm più in alto.</li></ul>"
+   }
+  ]
+ },
+ "files": {
+  "h2": "I file.",
+  "intro_html": "STL già orientati per la stampa; il modello si rigenera con blender/costruisci.py.",
+  "links": [
+   {
+    "label": "P01 Fondo",
+    "href": "stl/P01_Fondo.stl"
+   },
+   {
+    "label": "P02 Cornice sinistra",
+    "href": "stl/P02_Cornice_Sx.stl"
+   },
+   {
+    "label": "P03 Cornice destra",
+    "href": "stl/P03_Cornice_Dx.stl"
+   },
+   {
+    "label": "Modello Blender",
+    "href": "blender/Supporto_Muro_Tablet_T65.blend"
+   }
+  ]
+ },
+ "footer_html": "Guida offline: aprire questo file dalla cartella del progetto."
+}

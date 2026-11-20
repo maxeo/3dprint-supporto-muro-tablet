@@ -1,0 +1,5 @@
+# foto e schermate reali di casa: restano solo in locale
+privato/
+*.blend1
+__pycache__/
+*.pyc

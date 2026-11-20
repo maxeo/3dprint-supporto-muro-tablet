@@ -1,0 +1,105 @@
+{
+ "pezzi": {
+  "P01_Fondo": {
+   "min": [
+    -120.0,
+    -113.2,
+    0.0
+   ],
+   "max": [
+    120.0,
+    113.2,
+    11.0
+   ],
+   "size": [
+    240.0,
+    226.4,
+    11.0
+   ],
+   "volume_mm3": 290643,
+   "peso_PLA_g": 360.4,
+   "non_manifold_edges": 0,
+   "sta_sul_piatto": true
+  },
+  "P02_Cornice_Sx": {
+   "min": [
+    -85.0,
+    -115.5,
+    -0.0
+   ],
+   "max": [
+    86.2,
+    115.5,
+    16.0
+   ],
+   "size": [
+    171.2,
+    231.0,
+    16.0
+   ],
+   "volume_mm3": 33453,
+   "peso_PLA_g": 41.5,
+   "non_manifold_edges": 0,
+   "sta_sul_piatto": true
+  },
+  "P03_Cornice_Dx": {
+   "min": [
+    -92.3,
+    -115.5,
+    -0.0
+   ],
+   "max": [
+    85.0,
+    115.5,
+    16.0
+   ],
+   "size": [
+    177.3,
+    231.0,
+    16.0
+   ],
+   "volume_mm3": 36411,
+   "peso_PLA_g": 45.1,
+   "non_manifold_edges": 0,
+   "sta_sul_piatto": true
+  }
+ },
+ "controlli": {
+  "interferenza_tablet_fondo_mm3": 0.0,
+  "interferenza_fotocamera_fondo_mm3": 0.0,
+  "interferenza_tablet_cornice_sx_mm3": 0.0,
+  "interferenza_tablet_cornice_dx_mm3": 0.0,
+  "interferenza_fondo_cornice_sx_mm3": 0.0,
+  "interferenza_fondo_cornice_dx_mm3": 0.0,
+  "interferenza_sx_dx_mm3": 0.0,
+  "fermo_copre_vetro_mm": 3.0,
+  "distanza_fermo_fotocamera_frontale_mm": 1.0,
+  "bordo_anteriore_mm": 1.75,
+  "aria_sul_vetro_mm": 0.25,
+  "tasca_spina_usb_mm": 12.5,
+  "spessore_totale_mm": 16.0
+ },
+ "misure": {
+  "tablet": [
+   310.0,
+   201.0,
+   8.5
+  ],
+  "cornice": [
+   340.0,
+   231.0,
+   16.0
+  ],
+  "fondo": [
+   240.0,
+   226.4,
+   11.0
+  ],
+  "apertura": [
+   311.0,
+   202.0
+  ],
+  "y_scatola": 58.0,
+  "interasse_503": 83.5
+ }
+}
